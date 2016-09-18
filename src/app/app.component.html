@@ -1,3 +1,100 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-layout fullscreen>
+  <md-sidenav #sidenav>
+    <md-card-title>Login</md-card-title>
+    <button md-raised-button>Facebook</button><br/>
+    <button md-raised-button>Twitter</button><br/>
+    <button md-raised-button>Github</button><br/>
+    <button md-raised-button (click)="onGoogleAuth()">Google</button>
+    <br/><br/><br/><br/>
+    <md-card-title>Settings</md-card-title>
+    <button md-raised-button>Clear Old Resumes</button><br/>
+      <!-- <a *ngFor="let view of views">
+        <md-icon>{{view.icon.$value}}</md-icon>
+        <span>{{view.name.$value}}</span>
+        <span>{{view.description.$value}}</span>
+      </a> -->
+  </md-sidenav>
+  <md-toolbar [color]="primary">
+    <button md-icon-button (click)="sidenav.open()">
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+      </svg>
+    </button>
+    <span>{{title}}</span>
+    <button md-icon-button (click)="logoutAuth()"></button>
+  </md-toolbar>
+
+  <!-- <form>
+    <fieldset> -->
+      <div class="flex-container">
+        <md-card>
+          <md-card-title>Login</md-card-title>
+          <button md-raised-button>Facebook</button><br/>
+          <button md-raised-button>Twitter</button><br/>
+          <button md-raised-button>Github</button><br/>
+          <button md-raised-button (click)="onGoogleAuth()">Google</button>
+          <br/><br/><br/><br/>
+          <md-card-title>Settings</md-card-title>
+          <button md-raised-button>Clear Old Resumes</button><br/>
+          <button md-raised-button>Log Out</button><br/>
+
+          <!-- <md-input name="username" placeholder="Username" type="text" [ngModel]="(af.auth | async)?.auth.displayName"></md-input> -->
+          <!-- <h1 (ngModel)="this.userAuth?.displayName">Welcome back, {{this.userAuth?.displayName}}!</md-card-content> -->
+
+          <!-- <md-button-toggle-group name="alignment">
+              <md-button-toggle value="left">Facebook</md-button-toggle>
+              <md-button-toggle value="center">Twitter</md-button-toggle>
+              <md-button-toggle value="right">Github</md-button-toggle>
+              <md-button-toggle value="justify"><md-icon>format_align_justify</md-icon></md-button-toggle>
+          </md-button-toggle-group> -->
+        </md-card>
+
+        <md-card>
+          <md-card-title>Add a New Resume</md-card-title>
+          <md-input name="jobTitle" placeholder="Job Title" [(ngModel)]="this.jobTitle"></md-input>
+          <md-card-content>{{jobTitle}}</md-card-content>
+          <md-input name="jobDescr"  placeholder="Job Description" [(ngModel)]="this.jobDescr"></md-input>
+          <md-card-content>{{jobDescr}}</md-card-content>
+          <md-input name="resumeText" placeholder="Your Resume Text" [(ngModel)]="this.resumeText"></md-input>
+          <md-card-content>{{resumeText}}</md-card-content>
+          <!-- {
+            "user": "test",
+            "entries" : [{
+              "timestamp": "1474151753",
+              "jobTitle": "{{jobTitle}}",
+              "jobDescr": "{{jobDescr}}"
+              "resumeText": "{{resumeText}}"
+            }]
+          } -->
+          <md-card-actions>
+            <button md-button align="start" (click)="update()">Submit</button>
+          </md-card-actions>
+        </md-card>
+      </div>
+      <div class="flex-container">
+        <md-card *ngFor="let resume of resumesDisplay | async ">
+          <md-card-subtitle>{{resume?.timeStamp | date}}</md-card-subtitle>
+          <md-card-title>{{resume.score}}</md-card-title>
+          <md-card-subtitle>{{resume.jobTitle}}</md-card-subtitle>
+          <md-card-actions>
+            <button md-button align="end" (click)="more()">More</button>
+            <button md-button align="end" (click)="remove()" color="warn">Remove</button>
+          </md-card-actions>
+        </md-card>
+
+      </div>
+    <!-- </fieldset>
+  </form> -->
+  <!--<router-outlet *shellNoRender></router-outlet>-->
+  <!--<md-card>
+    <md-card-title>Find out how well your resume will rank for your dream job</md-card-title>
+    <md-card-content>
+      <md-input placeholder="Job Title" align="end"></md-input>
+      <md-input placeholder="Job Description" align="end"></md-input>
+      <md-input placeholder="Resume Text" align="end"></md-input>
+    </md-card-content>
+    <md-actions align="end">
+      <button md-raised-button color="accent">Rank Me</button>
+    </md-actions>
+  </md-card>-->
+</md-sidenav-layout>

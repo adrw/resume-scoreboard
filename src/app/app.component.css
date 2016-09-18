@@ -1,0 +1,49 @@
+md-sidenav-layout {
+  background-color: rgba(0,0,0,0.1);
+}
+
+md-toolbar {
+    color: #f2f2f2;
+    background-color: #2196F3;
+}
+
+md-card {
+    margin: 16px;
+    max-width: 75%;
+    min-width: 10%;
+    /*box-sizing: border-box;*/
+}
+
+md-card-title {
+  font-weight: bold;
+  span {
+    margin-left: 10px;
+    text-align: right;
+    color: #2196F3;
+  }
+}
+
+md-card-content {
+  padding-bottom: 25px;
+}
+
+md-input {
+  width: 100%;
+}
+
+form {
+}
+
+fieldset {
+  border: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 20px;
+}
+
+button {
+  margin: 10px;
+}
