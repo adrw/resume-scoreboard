@@ -5,6 +5,7 @@ Score your resume against the jobs you want. Make sure you rank at the top of re
 ![Resume Scoreboard v0.0 Alpha HTN-Demo](resume-scoreboard-htn-demo.gif)
 
 Features
+
 [x] Signup and Login with Facebook, Twitter, Google, or GitHub thanks to Firebase OAuth
 [x] Copy in your dream job title and description from any website or job board
 [x] Copy in your resume text, just click and drag across any PDF
