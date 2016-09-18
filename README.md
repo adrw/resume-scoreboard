@@ -6,12 +6,12 @@ Score your resume against the jobs you want. Make sure you rank at the top of re
 
 Features
 
-[x] Signup and Login with Facebook, Twitter, Google, or GitHub thanks to Firebase OAuth
-[x] Copy in your dream job title and description from any website or job board
-[x] Copy in your resume text, just click and drag across any PDF
-[x] Submit and see your latest score appear below
-[ ] Click more on generated scores to see insights and areas to improve
-[ ] Keep resume text saved so you don't have to copy in every time
+- [x] Signup and Login with Facebook, Twitter, Google, or GitHub thanks to Firebase OAuth
+- [x] Copy in your dream job title and description from any website or job board
+- [x] Copy in your resume text, just click and drag across any PDF
+- [x] Submit and see your latest score appear below
+- [ ] Click more on generated scores to see insights and areas to improve
+- [ ] Keep resume text saved so you don't have to copy in every time
 
 Built at Hack the North 2016 in Waterloo with:
 - Angular 2
