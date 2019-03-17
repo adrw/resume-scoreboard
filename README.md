@@ -1,6 +1,8 @@
 Resume Scoreboard
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adrw/resume-scoreboard.svg)](https://greenkeeper.io/)
+
 Score your resume against the jobs you want. Make sure you rank at the top of recruiter's resume searches.
 
 ![Resume Scoreboard v0.0 Alpha HTN-Demo](resume-scoreboard-htn-demo.gif)
